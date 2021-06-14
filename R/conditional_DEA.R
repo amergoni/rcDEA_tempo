@@ -117,7 +117,7 @@ conditional_DEA <- function(input, output, exogenous = FALSE, m, B, RTS, ORIENTA
         }
 
         #compute the DEA for unit i
-        DEA_B[j] <- dea(X = x, Y = y, RTS = "crs", ORIENTATION = "in", XREF = X_ref, YREF = Y_ref)$eff
+        DEA_B[j] <- dea(X = x, Y = y, RTS = "crs", ORIENTATION = ORIENTATION, XREF = X_ref, YREF = Y_ref)$eff
       }
       DEA[i] <- mean(DEA_B)
     }
